@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>ESPHome Demo Device</title>
+
+  <link
+    rel="stylesheet"
+    href="./css/esphome.css"
+  >
+</head>
+
+<body>
+
+  <script>
+    /*
+     * Datos utilizados únicamente por la página demo.
+     *
+     * En un ESPHome real estos datos llegarán
+     * mediante /events.
+     */
+
+    window.ESPHOME_UI_DEMO = {
+
+      config: {
+        title: "Interruptores del patio",
+        comment: "Salón · ESP32 · Demo UI",
+        uptime: 284732
+      },
+
+      entities: [
+
+        /*
+         * LIGHTS
+         */
+
+        {
+          id: "light/luz_patio",
+          name: "Luz del patio",
+          state: "ON"
+        },
+
+        {
+          id: "light/luz_porche",
+          name: "Luz del porche",
+          state: "OFF"
+        },
+
+        /*
+         * SWITCHES
+         */
+
+        {
+          id: "switch/relay_1",
+          name: "Relé 1",
+          state: "ON"
+        },
+
+        {
+          id: "switch/relay_2",
+          name: "Relé 2",
+          state: "OFF"
+        },
+
+        /*
+         * SENSORS
+         */
+
+        {
+          id: "sensor/temperature",
+          name: "Temperatura",
+          state: "24.3 °C"
+        },
+
+        {
+          id: "sensor/humidity",
+          name: "Humedad",
+          state: "43 %"
+        },
+
+        {
+          id: "sensor/wifi_signal",
+          name: "Señal WiFi",
+          state: "-52 dBm"
+        },
+
+        {
+          id: "sensor/uptime",
+          name: "Uptime",
+          state: "3d 7h"
+        },
+
+        /*
+         * BINARY SENSORS
+         */
+
+        {
+          id: "binary_sensor/presence",
+          name: "Presencia",
+          state: "ON"
+        },
+
+        {
+          id: "binary_sensor/door",
+          name: "Puerta",
+          state: "OFF"
+        },
+
+        /*
+         * COVER
+         */
+
+        {
+          id: "cover/blind",
+          name: "Persiana",
+          state: "OPEN"
+        },
+
+        /*
+         * BUTTON
+         */
+
+        {
+          id: "button/restart",
+          name: "Reiniciar ESP",
+          state: ""
+        },
+
+        /*
+         * NUMBER
+         */
+
+        {
+          id: "number/brightness",
+          name: "Brillo",
+          state: "65 %",
+          value: 65,
+          min_value: 0,
+          max_value: 100,
+          step: 1
+        },
+
+        /*
+         * SELECT
+         */
+
+        {
+          id: "select/mode",
+          name: "Modo",
+          state: "Auto",
+          options: [
+            "Auto",
+            "Manual",
+            "Eco"
+          ]
+        }
+
+      ]
+
+    };
+  </script>
+
+  <script src="./js/esphome.js"></script>
+
+</body>
+</html>
